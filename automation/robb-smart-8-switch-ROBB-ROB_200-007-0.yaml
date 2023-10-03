@@ -112,9 +112,9 @@ trigger:
   
 action:
   - variables:
-      button: "{{ trigger.event.data['endpoint_id'] }}"
-      cmd: "{{ trigger.event.data['command'] }}"
-      params: "{{ trigger.event.data['params'] }}"
+      button: '{{ trigger.event.data.endpoint_id }}'
+      cmd: '{{ trigger.event.data.command }}'
+      args: '{{ trigger.event.data.args }}'
   - choose:
       - conditions:
           - "{{ button == 1 and cmd == 'on' }}"
@@ -126,8 +126,8 @@ action:
           - "{{ button == 1 and cmd == 'move_with_on_off' }}"
         sequence:
           - if:
-              - condition: template
-                value_template: "{{ params['move_mode'] == 0 }}"
+              - condition:
+                - '{{ args[11] == "U" }}'
             then: 
                 !input "on_button_1_long"
             else:
@@ -143,8 +143,8 @@ action:
           - "{{ button == 2 and cmd == 'move_with_on_off' }}"
         sequence:
           - if:
-              - condition: template
-                value_template: "{{ params['move_mode'] == 0 }}"
+              - condition:
+                - '{{ args[11] == "U" }}'
             then: 
                 !input "on_button_2_long"
             else:
@@ -160,8 +160,8 @@ action:
           - "{{ button == 3 and cmd == 'move_with_on_off' }}"
         sequence:
           - if:
-              - condition: template
-                value_template: "{{ params['move_mode'] == 0 }}"
+              - condition:
+                - '{{ args[11] == "U" }}'
             then: 
                 !input "on_button_3_long"
             else:
@@ -177,8 +177,8 @@ action:
           - "{{ button == 4 and cmd == 'move_with_on_off' }}"
         sequence:
           - if:
-              - condition: template
-                value_template: "{{ params['move_mode'] == 0 }}"
+              - condition:
+                - '{{ args[11] == "U" }}'
             then: 
                 !input "on_button_4_long"
             else:

@@ -5,6 +5,7 @@ blueprint:
     It is for genral use so all buttons can be connected to any action of your choice. This remote supports short button clicks and long button presses (over 4 seconds)
     Make sure to select the correct sensor for the remote.
   domain: automation
+  source_url: https://github.com/Bekkie/ha-blueprints/blob/main/automation/robb-smart-8-switch-ROBB-ROB_200-007-0.yaml
   input:
     remote:
       name: Remote

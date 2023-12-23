@@ -4,15 +4,36 @@
 
 Repo for with home assistant blueprints 
 
-### automation/robb-smart-8-switch-ROBB-ROB_200-007-0.yaml
+### automation/robb-smarrt-8-switch-ROB_200-007-0.yaml
 
-It’s a simple blueprint that just maps all the available actions for all 8 buttons.
+It’s a simple blueprint for ROBB SMARRT ZigBee Wall switch, that  maps all the available actions for all 8 buttons.
 The available actions are:
 
 - short press (each button)
 - long press (each button)
 
 This allows you to map any of the button (events) to any action you choose.
+
+### automation/robb-smarrt-4-switch-ROB_200-008-0.yaml
+
+Same as 8 button wall switch but for the 4 button variant
+
+### automation/robb-smarrt-2-switch-ROB_200-009-0.yaml
+
+Same as 8 button wall switch but for the 3 button variant
+
+### automation/robb-smarrt-4-ch-remote-ROB_200-024-0.yaml
+
+It’s a simple blueprint for ROBB SMARRT ZigBee Remote controller, that  maps all the available actions for all 5 vertical buttons.
+The available actions are:
+
+- short press (each button)
+- long press (each button)
+
+This allows you to map any of the button (events) to any action you choose.
+
+### automation/robb-smart-8-switch-ROBB-ROB_200-007-0.yaml
+Old name keeping for installed base
 
 ## ESPHome_examples 
 

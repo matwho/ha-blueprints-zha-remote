@@ -111,7 +111,8 @@ blueprint:
         action: {}
 
 
-mode: restart
+mode: queued
+max: 16
 max_exceeded: silent
 trigger:
   - platform: event

@@ -104,8 +104,8 @@ blueprint:
       default: []
       selector:
         action: {}
-    off_button_s2:
-      name: Off button S2
+    on_button_s2:
+      name: On button S2
       default: []
       selector:
         action: {}
@@ -204,6 +204,5 @@ action:
             then: 
                 !input "on_button_s1"
             else:
-                !input "oon_button_s2"
+                !input "on_button_s2"
 
-                

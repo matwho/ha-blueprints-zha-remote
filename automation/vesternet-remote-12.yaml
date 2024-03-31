@@ -99,6 +99,17 @@ blueprint:
       selector:
         action: {}
 
+    on_button_s1:
+      name: On button S1
+      default: []
+      selector:
+        action: {}
+    off_button_s2:
+      name: Off button S2
+      default: []
+      selector:
+        action: {}
+
 
 mode: restart
 max_exceeded: silent
@@ -113,6 +124,8 @@ action:
       button: '{{ trigger.event.data.endpoint_id }}'
       cmd: '{{ trigger.event.data.command }}'
       args: '{{ trigger.event.data.args }}'
+      scene: '{{ trigger.event.data.params.scene_id }}'
+
   - choose:
       - conditions:
           - "{{ button == 1 and cmd == 'on' }}"
@@ -181,3 +194,16 @@ action:
                 !input "on_button_4_long"
             else:
                 !input "off_button_4_long"
+
+      - conditions:
+          - "{{ button == 4 and cmd == 'recall' }}"
+        sequence:
+          - if:
+              - condition:
+                - '{{ scene == 1 }}'
+            then: 
+                !input "on_button_s1"
+            else:
+                !input "oon_button_s2"
+
+                
